@@ -69,6 +69,7 @@ header > * {
 
     
     .navbar {
+        background: linear-gradient(135deg, #110822 0%, #2a1a42 100%);
         position: fixed;
         top: 0;
         left: 0;
@@ -355,45 +356,115 @@ header > * {
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
     
-    .testimonials {
-        margin-top: 4rem;
+.testimonials {
+    margin-top: 4rem;
+}
+
+.testimonial {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+
+/* TEXTO + CAPTURA FRENTE A FRENTE */
+.testimonials {
+    margin-top: 4rem;
+}
+
+.testimonial {
+    background: linear-gradient(135deg, #2c223a, #3a2d4f);
+    border-radius: 18px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+/* CONTENIDO PRINCIPAL */
+.testimonial-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* CAPTURA */
+.testimonial-captures img {
+    width: 240px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* TEXTO */
+.testimonial p {
+    font-size: 1.3rem;              /* MÁS GRANDE */
+    line-height: 1.7;
+    font-style: italic;
+    color: #f2eef7;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+/* COMILLAS JUNTO AL TEXTO */
+.testimonial p::before {
+    content: "“";
+    font-size: 4rem;
+    position: absolute;
+    left: 0;
+    top: -0.8rem;
+    color: var(--secondary-color);
+    opacity: 0.6;
+}
+
+/* AUTOR ABAJO A LA DERECHA */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.testimonial-author img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+        width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.4);
+}
+
+.testimonial-author span {
+    font-weight: 600;
+    color: #e0d7f0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .testimonial-content {
+        flex-direction: column;
+        text-align: center;
     }
-    
-    .testimonial {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        padding: 2rem;
-        margin-bottom: 2rem;
-        position: relative;
-    }
-    
-    .testimonial::before {
-        content: "\201C";
-        font-size: 4rem;
-        position: absolute;
-        top: -0.5rem;
-        left: 1rem;
-        color: var(--secondary-color);
-        opacity: 0.3;
-    }
-    
+
     .testimonial p {
-        font-style: italic;
-        margin-bottom: 1rem;
+        padding-left: 0;
     }
-    
+
+    .testimonial p::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     .testimonial-author {
-        display: flex;
-        align-items: center;
+        justify-content: center;
     }
-    
-    .testimonial-author img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-right: 1rem;
-    }
-    
+}
+
+
     /* Whatsapp Flotante */
     .whatsapp-float {
         position: fixed;
