@@ -59,7 +59,7 @@ AOS.init({
         // WhatsApp button functionality
         document.getElementById('whatsapp-btn').addEventListener('click', () => {
             const phone = '17273344290';
-            const message = 'Hola, deseo recibir orientación espiritual 🙏✨';
+            const message = 'Hola, deseo recibir orientación espiritual';
             
             const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
             window.open(url, '_blank');
