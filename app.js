@@ -58,7 +58,7 @@ AOS.init({
         
         // WhatsApp button functionality
         document.getElementById('whatsapp-btn').addEventListener('click', () => {
-            const phone = '573165796846';
+            const phone = '17273344290';
             const message = 'Hola, deseo recibir orientación espiritual 🙏✨';
             
             const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
@@ -69,7 +69,7 @@ AOS.init({
         // Contact buttons
         document.querySelectorAll('.contact-btn').forEach(button => {
             button.addEventListener('click', function() {
-                const phone = '573165796846'; // tu número
+                const phone = '17273344290'; // tu número
                 const service = this.getAttribute('data-service');
                 
                 const message = `Hola, estoy interesado en el servicio de ${service} 🌿`;
