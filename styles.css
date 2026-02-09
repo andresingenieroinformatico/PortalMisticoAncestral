@@ -466,23 +466,54 @@ header > * {
 
 
     /* Whatsapp Flotante */
-    .whatsapp-float {
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        background-color: #25d366;
-        color: white;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s;
-        z-index: 999;
-    }
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+.whatsapp-float i {
+    font-size: 28px;
+}
+
+/* 🔧 BURBUJA AJUSTADA */
+.whatsapp-bubble {
+    position: absolute;
+    bottom: 70px;
+    right: 0;                 /* clave */
+    background: #ffffff;
+    color: #333;
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    opacity: 1;
+}
+
+/* Flechita alineada al icono */
+.whatsapp-bubble::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 18px;              /* apunta al centro del botón */
+    border-width: 8px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+    
     
     .whatsapp-float:hover {
         transform: scale(1.1);
